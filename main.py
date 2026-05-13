@@ -1,11 +1,15 @@
 import pandas as pd
-from src.ingestion.reader import read_file
-from src.utils.logger import setup_log
+
+from src.utils.logger import setup_logging
+from src.ingestion.pipeline import run_pipeline
+
+FILENAME = "data/raw/Meteorite_Landings.csv"
 
 def main():
 
-    logger = setup_log()
+    logger = setup_logging()
 
+    run_pipeline(FILENAME)
 
 if __name__ == "__main__":
     main()

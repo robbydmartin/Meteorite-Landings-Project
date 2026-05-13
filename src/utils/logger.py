@@ -5,8 +5,9 @@ from pathlib import Path
 
 MAX_BYTES = 5 * 1024 * 1024
 
-def setup_log() -> logging.Logger:
+def setup_logging() -> logging.Logger:
 
+    # Create path to log file
     project_root = Path(__file__).resolve().parents[2]
     log_dir = project_root / "data"/ "logs"
 
